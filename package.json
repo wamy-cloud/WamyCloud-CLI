@@ -1,0 +1,24 @@
+{
+  "name": "wamy-cloud",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Wamy Cloud NPM connects to the Wamy Cloud console to run test cases, tasks, schedule and update them.",
+  "main": "wamy.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "wamy",
+    "cloud",
+    "testing",
+    "automation"
+  ],
+  "author": "JD",
+  "license": "ISC",
+  "dependencies": {
+    "@bundled-es-modules/axios": "github:bundled-es-modules/axios",
+    "axios": "^0.27.2",
+    "chalk": "^5.0.1",
+    "ora": "^6.1.2"
+  }
+}
