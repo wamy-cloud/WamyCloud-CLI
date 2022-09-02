@@ -22,9 +22,7 @@ export default class WamyCloudCli extends events {
 
         this.welcome();
 
-        this.validateToken();
-
-        // await this.getTestCases(`Test_Project`);
+        await this.getTestCases(`Test_Project`);
 
     }
 
@@ -39,7 +37,7 @@ export default class WamyCloudCli extends events {
 
         this.wamyCloudAPI = WamyCloudAPI.factory(api_token);
 
-        return true;
+        return await this.validateToken();
     }
 
     welcome(){
@@ -76,9 +74,11 @@ export default class WamyCloudCli extends events {
 
             this.output(``);
 
+            this.connected = true;
+
         }
 
-
+        return !greeting.error;
     }
 
     async getTestCases(project_id) {
